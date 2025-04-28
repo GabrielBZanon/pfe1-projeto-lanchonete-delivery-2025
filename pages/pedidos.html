@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanchonete Delivery</title>
-    <link rel="stylesheet" href="../styles/pedidos.css">
+    <title>Lanchonete Delivery - Pedidos Concluídos</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/pedidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Lanchonete Delivery</h1>
+        <nav>
+            <a href="home.html">Pedidos</a>
+            <a href="pedidos.html" class="active">Concluídos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="concluidos-section">
+            <h2>Pedidos Concluídos</h2>
+            <div class="table-container">
+                <table id="pedidosConcluidos">
+                    <thead>
+                        <tr>
+                            <th>Data/Hora</th>
+                            <th>Cliente</th>
+                            <th>Lanche</th>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/pedidos.js"></script>
 </body>
-<script src="../scripts/pedidos.js"></script>
 </html>

@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanchonete Delivery</title>
-    <link rel="stylesheet" href="../styles/home.css">
+    <title>Lanchonete Delivery - Pedidos</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Lanchonete Delivery</h1>
+        <nav>
+            <a href="home.html" class="active">Pedidos</a>
+            <a href="pedidos.html">Concluídos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Novo Pedido</h2>
+            <form id="pedidoForm">
+                <div class="form-group">
+                    <label for="clienteNome">Nome do Cliente:</label>
+                    <input type="text" id="clienteNome" required>
+                </div>
+                <div class="form-group">
+                    <label for="clienteEndereco">Endereço:</label>
+                    <input type="text" id="clienteEndereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="clienteTelefone">Telefone:</label>
+                    <input type="tel" id="clienteTelefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="lancheSelect">Lanche:</label>
+                    <select id="lancheSelect" required>
+                        <option value="">Selecione um lanche</option>
+                    </select>
+                </div>
+                <button type="submit">Cadastrar Pedido</button>
+            </form>
+        </section>
+
+        <section class="pedidos-section">
+            <div class="pedidos-column">
+                <h2>Em Execução</h2>
+                <div id="pedidosExecucao" class="pedidos-container"></div>
+            </div>
+            <div class="pedidos-column">
+                <h2>Em Entrega</h2>
+                <div id="pedidosEntrega" class="pedidos-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Detalhes do Pedido</h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="scripts/home.js"></script>
 </body>
-<script src="../scripts/home.js"></script>
 </html>
